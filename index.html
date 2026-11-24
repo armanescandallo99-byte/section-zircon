@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="tl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section Zircon | Iligan City National High School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        zircon: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+        }
+        .zircon-gradient {
+            background: linear-gradient(135deg, #082f49 0%, #0369a1 55%, #0284c7 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-200 selection:text-sky-900">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-lg zircon-gradient flex items-center justify-center text-white font-bold shadow">
+                        <i class="fa-regular fa-gem text-sky-200"></i>
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-lg tracking-tight text-slate-900 block leading-none">ZIRCON</span>
+                        <span class="text-[11px] font-semibold text-sky-700 tracking-wider uppercase">ICNHS • S.Y. 2026–2027</span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+                    <a href="#about" class="hover:text-sky-600 transition">Tungkol sa Amin</a>
+                    <a href="#officers" class="hover:text-sky-600 transition">Class Officers</a>
+                    <a href="#schedule" class="hover:text-sky-600 transition">Iskedyul</a>
+                    <a href="#wall" class="hover:text-sky-600 transition">Freedom Wall</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-semibold">
+            <a href="#about" class="block py-2 text-slate-700 hover:text-sky-600">Tungkol sa Amin</a>
+            <a href="#officers" class="block py-2 text-slate-700 hover:text-sky-600">Class Officers</a>
+            <a href="#schedule" class="block py-2 text-slate-700 hover:text-sky-600">Iskedyul</a>
+            <a href="#wall" class="block py-2 text-slate-700 hover:text-sky-600">Freedom Wall</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="zircon-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-sky-100 text-xs font-semibold mb-5">
+                    <i class="fa-solid fa-school"></i>
+                    <span>Iligan City National High School</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4">
+                    Welcome sa Official Portal ng <span class="text-amber-300">Section Zircon</span>
+                </h1>
+                <p class="text-base sm:text-lg text-sky-100 mb-8 leading-relaxed max-w-2xl">
+                    Isang pamilya sa ilalim ng gabay ni <strong>Mrs. Ginalyn Kiamko</strong>. Dito naka-compile ang aming class schedule, mga opisyales, announcements, at mga kulitan ng buong klase.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="#schedule" class="px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-sm transition shadow-lg shadow-amber-500/20">
+                        Tingnan ang Schedule
+                    </a>
+                    <a href="#officers" class="px-6 py-3 rounded-xl bg-white/15 hover:bg-white/25 border border-white/25 text-white font-semibold text-sm transition">
+                        Kilalanin ang Officers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About & Class Adviser Section -->
+    <section id="about" class="py-14 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Class Adviser Spotlight -->
+            <div class="md:col-span-1 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <span class="inline-block px-3 py-1 rounded-md bg-sky-50 text-sky-700 text-xs font-bold uppercase tracking-wider mb-3">
+                        Class Adviser
+                    </span>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full zircon-gradient text-white flex items-center justify-center text-xl font-bold shrink-0">
+                            GK
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-extrabold text-slate-900">Mrs. Ginalyn Kiamko</h3>
+                            <p class="text-xs text-slate-500 font-medium">Iligan City National High School</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Ang aming pangalawang ina sa paaralan na laging gumagabay, sumusuporta, at nagpapaalala sa amin na tapusin ang mga requirements sa tamang oras.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-semibold">
+                    <span>Section: Zircon</span>
+                    <span class="text-emerald-600"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Active S.Y.</span>
+                </div>
+            </div>
+
+            <!-- Class Info / Bulletin -->
+            <div class="md:col-span-2 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                <h2 class="text-xl font-extrabold text-slate-900 mb-2">Tungkol sa Section Zircon</h2>
+                <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                    Gaya ng batong Zircon na matibay at kumikinang, naniniwala ang aming klase na kaya naming lampasan ang kahit anong research defense, performance task, at exam basta magkakasama at nagtutulungan.
+                </p>
+
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-sky-600 font-bold text-lg mb-1"><i class="fa-solid fa-users"></i> Pagkakaisa</div>
+                        <p class="text-xs text-slate-600">Walang iwanan sa groupings, reporting, at school activities.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-amber-500 font-bold text-lg mb-1"><i class="fa-solid fa-book-open"></i> Sipag</div>
+                        <p class="text-xs text-slate-600">Laging handa sa 1st Term at 2nd Term subjects.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-emerald-600 font-bold text-lg mb-1"><i class="fa-solid fa-face-laugh-beam"></i> Good Vibes</div>
+                        <p class="text-xs text-slate-600">Stress sa acads pero laging may tawanan sa classroom.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Officers Section -->
+    <section id="officers" class="py-12 bg-white border-y border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Classroom Leadership</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Zircon Class Officers</h2>
+                </div>
+                <div class="relative w-full sm:w-64">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-sm"></i>
+                    <input type="text" id="officerSearch" placeholder="Hanapin ang pangalan o posisyon..." 
+                        class="w-full pl-9 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-sky-500">
+                </div>
+            </div>
+
+            <div id="officersGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Officers injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Schedule Section -->
+    <section id="schedule" class="py-14 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Subject Load</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Iskedyul ng Klase</h2>
+            </div>
+
+            <!-- Term Switcher -->
+            <div class="inline-flex p-1 rounded-xl bg-slate-200/80 self-start">
+                <button id="btnTerm1" onclick="switchTerm('term1')" 
+                    class="px-4 py-2 rounded-lg text-sm font-bold transition bg-white text-sky-800 shadow-sm">
+                    1st Term
+                </button>
+                <button id="btnTerm2" onclick="switchTerm('term2')" 
+                    class="px-4 py-2 rounded-lg text-sm font-bold transition text-slate-600 hover:text-slate-900">
+                    2nd Term
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
+                            <th class="py-4 px-6 font-bold">Oras</th>
+                            <th class="py-4 px-6 font-bold">Subject</th>
+                            <th class="py-4 px-6 font-bold">Subject Teacher</th>
+                            <th class="py-4 px-6 font-bold">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scheduleBody" class="divide-y divide-slate-100 text-sm">
+                        <!-- Schedule rows injected via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freedom Wall / Class Shoutouts -->
+    <section id="wall" class="py-14 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mb-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Zircon Tambayan</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Class Freedom Wall</h2>
+                <p class="text-sm text-slate-600 mt-1">Mag-iwan ng paalala, shoutout, o pampalakas-loob para sa mga kaklase.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                <!-- Post Form -->
+                <form id="wallForm" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-fit">
+                    <h3 class="font-bold text-slate-900 mb-4">Mag-post ng Mensahe</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1">Pangalan o Codename</label>
+                            <input type="text" id="postAuthor" required placeholder="Hal. Redzel / Anonymous"
+                                class="w-full px-3.5 py-2 text-sm border border-slate-200 rounded-xl focus:outline-none focus:border-sky-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1">Mensahe para sa Zircon</label>
+                            <textarea id="postMessage" rows="3" required placeholder="Kaya natin 'to guys! Good luck sa defense!"
+                                class="w-full px-3.5 py-2 text-sm border border-slate-200 rounded-xl focus:outline-none focus:border-sky-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-2.5 rounded-xl zircon-gradient text-white font-bold text-sm hover:opacity-95 transition">
+                            I-post sa Wall
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Posts Feed -->
+                <div id="wallFeed" class="lg:col-span-2 grid sm:grid-cols-2 gap-4">
+                    <!-- Posts injected via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+                <p class="text-white font-bold text-base">Section Zircon — Iligan City National High School</p>
+                <p class="text-xs mt-1">Class Adviser: Mrs. Ginalyn Kiamko</p>
+            </div>
+            <div class="text-xs sm:text-right">
+                <p class="text-slate-300 font-semibold">Website Coded & Developed by:</p>
+                <p class="text-amber-400 font-bold mt-0.5">Arman B. Escandallo & Rohe Jireh Bado</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Class Officers Data
+        const officers = [
+            { role: "President", name: "Redzel Popera", icon: "fa-crown", color: "bg-amber-100 text-amber-700" },
+            { role: "Vice President", name: "Vanessa Estoya", icon: "fa-star", color: "bg-sky-100 text-sky-700" },
+            { role: "Secretary", name: "Reshie Geguiera", icon: "fa-pen-nib", color: "bg-indigo-100 text-indigo-700" },
+            { role: "Treasurer", name: "Queeny Bato", icon: "fa-coins", color: "bg-emerald-100 text-emerald-700" },
+            { role: "Auditor", name: "John David Dahan", icon: "fa-calculator", color: "bg-teal-100 text-teal-700" },
+            { role: "Social Manager", name: "Aaron Oncoy", icon: "fa-bullhorn", color: "bg-purple-100 text-purple-700" },
+            { role: "Social Manager", name: "Charize Balandra", icon: "fa-bullhorn", color: "bg-purple-100 text-purple-700" },
+            { role: "Sgt. at Arms", name: "Arman Escandallo", icon: "fa-shield-halved", color: "bg-slate-200 text-slate-800" },
+            { role: "Sgt. at Arms", name: "Catherine Medado", icon: "fa-shield-halved", color: "bg-slate-200 text-slate-800" },
+            { role: "Class Escort", name: "John Ron Natinga", icon: "fa-user-tie", color: "bg-blue-100 text-blue-700" },
+            { role: "Class Muse", name: "Giecil Peñaserada", icon: "fa-wand-magic-sparkles", color: "bg-pink-100 text-pink-700" }
+        ];
+
+        function renderOfficers(filter = "") {
+            const grid = document.getElementById('officersGrid');
+            const filtered = officers.filter(o => 
+                o.name.toLowerCase().includes(filter.toLowerCase()) || 
+                o.role.toLowerCase().includes(filter.toLowerCase())
+            );
+
+            grid.innerHTML = filtered.map(officer => `
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:shadow-md transition flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl ${officer.color} flex items-center justify-center shrink-0 text-base">
+                        <i class="fa-solid ${officer.icon}"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-sky-700 block">${officer.role}</span>
+                        <h3 class="font-bold text-slate-900 text-base">${officer.name}</h3>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        document.getElementById('officerSearch').addEventListener('input', (e) => {
+            renderOfficers(e.target.value);
+        });
+
+        // Schedule Data
+        const schedules = {
+            term1: [
+                { time: "7:30 AM – 9:00 AM", subject: "Social Science (Soc Sci)", teacher: "Subject Teacher", status: "1st Term" },
+                { time: "9:30 AM – 11:00 AM", subject: "Creative Composition", teacher: "Subject Teacher", status: "1st Term" },
+                { time: "12:45 PM – 2:00 PM", subject: "Malikhaing Pagsulat", teacher: "Subject Teacher", status: "1st Term" }
+            ],
+            term2: [
+                { time: "7:30 AM – 9:00 AM", subject: "Research", teacher: "Ma'am Jacky", status: "2nd Term" },
+                { time: "12:30 PM – 2:00 PM", subject: "Empowerment Technology (E-Tech)", teacher: "Ma'am Yanie", status: "2nd Term" },
+                { time: "2:00 PM – 3:30 PM", subject: "Civic Engagement", teacher: "Ma'am Cabigon", status: "2nd Term" }
+            ]
+        };
+
+        function switchTerm(term) {
+            const btn1 = document.getElementById('btnTerm1');
+            const btn2 = document.getElementById('btnTerm2');
+            const body = document.getElementById('scheduleBody');
+
+            if (term === 'term1') {
+                btn1.className = "px-4 py-2 rounded-lg text-sm font-bold transition bg-white text-sky-800 shadow-sm";
+                btn2.className = "px-4 py-2 rounded-lg text-sm font-bold transition text-slate-600 hover:text-slate-900";
+           
